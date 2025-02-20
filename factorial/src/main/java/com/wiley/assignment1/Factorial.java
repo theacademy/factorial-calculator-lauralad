@@ -35,6 +35,7 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
 
+
 		 // using a try-catch block in case user does not enter a number, resulting in an error when parsing
 		 try {
 			 //retrieving user input and converting from String to Integer
@@ -50,8 +51,8 @@ public class Factorial {
 		 }
 		 catch (NumberFormatException exception) {
 			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
-
 		 }
+
 		 return -1;
 
 		//YOUR CODE ENDS HERE
