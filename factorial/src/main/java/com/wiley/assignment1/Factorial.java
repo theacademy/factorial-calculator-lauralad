@@ -38,7 +38,7 @@ public class Factorial {
 
 		 // using a try-catch block in case user does not enter a number, resulting in an error when parsing
 		 try {
-
+			 //retrieving user input and converting from String to Integer
 			 this.num = Integer.parseInt(this.scanner.nextLine());
 
 			 // checking input constraints, the 'positive' requirement is enforced by the [1,10] range
