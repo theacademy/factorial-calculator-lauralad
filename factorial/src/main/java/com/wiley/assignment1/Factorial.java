@@ -35,7 +35,25 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
 
-		return -1;
+
+		 // using a try-catch block in case user does not enter a number, resulting in an error when parsing
+		 try {
+
+			 this.num = Integer.parseInt(this.scanner.nextLine());
+
+			 // checking input constraints, the 'positive' requirement is enforced by the [1,10] range
+			 if (this.num < 1 || this.num > 10){
+				 // if the number is not valid here either, throw the same exception that is caught below
+				 throw new NumberFormatException();
+			 }
+
+			 return this.num;
+		 }
+		 catch (NumberFormatException exception) {
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+
+		 }
+		 return -1;
 
 		//YOUR CODE ENDS HERE
 		 
@@ -54,7 +72,10 @@ public class Factorial {
 		int result = 1;
 		//YOUR CODE STARTS HERE
 
- 
+		// iterate through all numbers from 1 till num and multiply them
+		 for (int i = 1; i <= num; i++) {
+			 result *= i;
+		 }
 
 		//YOUR CODE ENDS HERE
 		this.printStream.print("The Factorial is: " + result);		
